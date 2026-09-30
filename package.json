@@ -1,0 +1,78 @@
+{
+  "name": "animehub-desktop",
+  "productName": "AnimeHub",
+  "version": "1.0.0",
+  "description": "AnimeHub desktop app: anime, movies and series with ad-free players and desktop notifications.",
+  "author": "Taha Shahat Ebaed",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "icons": "node scripts/icons.mjs",
+    "dist": "electron-builder --publish never",
+    "release": "npm version patch && git push --follow-tags"
+  },
+  "build": {
+    "appId": "com.tahaebaed.animehub",
+    "productName": "AnimeHub",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "blocklist.js",
+      "offline.html",
+      "build/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "artifactName": "AnimeHub-Setup-${version}.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.entertainment",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "artifactName": "AnimeHub-${version}-mac.${ext}"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "tahaebaed",
+        "repo": "animehub-desktop",
+        "releaseType": "release"
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}
