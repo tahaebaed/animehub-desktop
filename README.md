@@ -1,6 +1,6 @@
-# AnimeHub Desktop
+# AnimeHub apps
 
-The AnimeHub website in its own app, with extras a browser can't do:
+AnimeHub for Windows, Mac and Android, with extras a browser can't do:
 
 - **No ads or pop-ups** from the video players (ad networks are blocked, and players can't open windows or redirect the app).
 - **More anime episodes play in AnimeHub's own player** (resume, auto skip, Arabic subtitles), because the app can send the headers some video servers require.
@@ -25,6 +25,13 @@ xattr -cr /Applications/AnimeHub.app
 
 Macs don't install updates by themselves for unsigned apps: when a new version is out, AnimeHub asks and opens this
 page. Download the new `.dmg` and replace the app.
+
+**Android:** download `AnimeHub-x.y.z.apk` on your phone and open it. Android asks to allow installing apps from
+your browser the first time: tap **Settings → Allow from this source**, go back, then **Install**. If Play Protect warns
+about an unknown app, tap **More details → Install anyway** (it only means the app isn't from the Play Store).
+When a new version is out, AnimeHub offers to download it: open the downloaded file and tap **Update**.
+The Android app shows the live AnimeHub site with the same ad blocking, plus full-screen landscape video and
+new-episode notifications (allow notifications when asked).
 
 ## Shortcuts
 
