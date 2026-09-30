@@ -5,7 +5,7 @@ The AnimeHub website in its own app, with extras a browser can't do:
 - **No ads or pop-ups** from the video players (ad networks are blocked, and players can't open windows or redirect the app).
 - **More anime episodes play in AnimeHub's own player** (resume, auto skip, Arabic subtitles), because the app can send the headers some video servers require.
 - **Desktop notifications** when a new episode of a show on your list airs. Closing the window keeps AnimeHub in the tray so these keep coming; quit from the tray icon.
-- **Always up to date**: the app shows the live site, so new features appear immediately. The app itself updates from this page's releases.
+- **Always up to date**: new versions install from this page's releases (automatically on Windows).
 
 ## Install
 
@@ -30,12 +30,3 @@ page. Download the new `.dmg` and replace the app.
 
 F5 reload · F11 full screen · Alt+← / Alt+→ back and forward. On watch pages: T theater · L focus mode · N next episode.
 
-## Releasing an update (maintainer)
-
-```sh
-npm run release        # bumps the patch version, tags it, pushes; GitHub Actions builds Windows + Mac and publishes
-```
-
-Use `npm version minor` / `major` then `git push --follow-tags` for bigger versions. Test locally with `npm start`
-(`ANIMEHUB_URL=http://localhost:3000 npm start` against a local site) and `npm run dist` for a local installer.
-Website changes don't need an app release: they reach the app as soon as the site deploys.
