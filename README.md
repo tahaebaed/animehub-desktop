@@ -17,7 +17,8 @@ Download from **[Releases → latest](https://github.com/tahaebaed/animehub-desk
 "Windows protected your PC" the first time: click **More info → Run anyway**. Updates then install automatically
 (you'll be asked to restart).
 
-**Mac:** open `Animurloc-x.y.z-mac.dmg` and drag Animurloc to Applications. The first time, macOS blocks apps from
+**Mac** (macOS 12 Monterey or newer): open `Animurloc-x.y.z-mac-arm64.dmg` on Apple Silicon (M1 and newer) or
+`Animurloc-x.y.z-mac-x64.dmg` on Intel Macs ( → About This Mac shows which), and drag Animurloc to Applications. The first time, macOS blocks apps from
 unidentified developers: **right-click Animurloc → Open → Open**. If it says the app "is damaged", run this once in
 Terminal, then open it again:
 
